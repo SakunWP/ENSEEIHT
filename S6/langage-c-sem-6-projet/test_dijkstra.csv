@@ -1,0 +1,10 @@
+#,File,Section,Test,Succ?,Fail?,Sign?,Time?,Unkn?,Line,Signum
+0,test_dijkstra.c,"dijkstra/petits-graphes","dijkstra-1noeud",1,,,,,,
+1,test_dijkstra.c,"dijkstra/petits-graphes","dijkstra-2noeuds",1,,,,,,
+2,test_dijkstra.c,"dijkstra/petits-graphes","dijkstra-3noeuds",1,,,,,,
+3,test_dijkstra.c,"dijkstra/petits-graphes","dijkstra-3noeuds-connexe",1,,,,,,
+4,test_dijkstra.c,"dijkstra/petits-graphes","dijkstra-4noeuds",1,,,,,,
+5,test_dijkstra.c,"dijkstra/petits-graphes","dijkstra-cycle",1,,,,,,
+6,test_dijkstra.c,"dijkstra/grilles-5x6","haut-gauche--bas-droite",1,,,,,,
+7,test_dijkstra.c,"dijkstra/grilles-5x6","haut-gauche--haut-droite",1,,,,,,
+8,test_dijkstra.c,"dijkstra/grilles-5x6","haut-guahce--bas-gauche",1,,,,,,
