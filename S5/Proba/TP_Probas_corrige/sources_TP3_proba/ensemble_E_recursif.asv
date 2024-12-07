@@ -1,0 +1,38 @@
+% Fonction ensemble_E_recursif (exercie_1.m)
+
+function [E,contour,G_somme] = ensemble_E_recursif(E,contour,G_somme,i,j,...
+                                                   voisins,G_x,G_y,card_max,cos_alpha)
+    contour(i,j) = 0;
+    coords_voisins = [i j] + voisins;
+
+    k = 1;
+    while (k <= length(coords_voisins) && length(E) <= card_max)
+        vk = coords_voisins(k);
+        ik = vk(1);
+        jk = vk(2);
+        if contour(ik,jk)
+            Gvk_x = G_x(ik,jk);
+            Gvk_y = G_y(ik,jk);
+            Gk = [Gvk_x Gvk_y];
+            if (Gk/norm(Gk) .* G_somme/norm(G_somme) >= cos_alpha)
+                E = [E;vk];
+                G_somme = G_somme + G_k;
+                
+            end
+        end
+        
+    end
+
+    G = [G_x, G_y];
+    Gij = G(i,j);
+    Gij_x = G_x(i,j);
+    Gij_y = G_y(i,j);
+    normGij = sqrt(Gij_x^2+Gij_y^2);
+
+    if (Gij/normGij .* G_somme/norm(G_somme) >= cos_alpha && length(E) <= card_max) {
+        E = E;
+         % On retire le germe du contour %
+    }
+
+    end
+end

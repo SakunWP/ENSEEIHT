@@ -1,0 +1,84 @@
+Algorithme de Gauss-Newton
+ndigits 9 
+Vraie Jacobienne = 0
+Methode diff finies = avants
+------------------------------------------------------------------
+         k     ||f'(beta)||   f(beta)      ||s||       exitflag 
+------------------------------------------------------------------
+{Unable to perform assignment because the size of the left side is 1-by-1 and the
+size of the right side is 7-by-1.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('diff_finies_avant', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m', 30)" style="font-weight:bold">diff_finies_avant</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m',30,0)">line 30</a>)
+        Jac(k,j)=(fun(x+h*v)-fun(x))/h;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('C14_diff_finies', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/C14_diff_finies.m', 112)" style="font-weight:bold">C14_diff_finies</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/C14_diff_finies.m',112,0)">line 112</a>)
+	    Jres = diff_finies_avant( @(beta) res_C14_ref(beta,Ti,Ai), beta0, ndigits);
+} 
+Index: 7, Size: 7
+java.lang.IndexOutOfBoundsException: Index: 7, Size: 7
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at java.awt.Container.createHierarchyEvents(Container.java:1444)
+	at java.awt.Container.createHierarchyEvents(Container.java:1444)
+	at java.awt.Container.createHierarchyEvents(Container.java:1444)
+	at java.awt.Container.createHierarchyEvents(Container.java:1444)
+	at java.awt.Component.show(Component.java:1639)
+	at java.awt.Component.show(Component.java:1671)
+	at java.awt.Component.setVisible(Component.java:1623)
+	at javax.swing.JComponent.setVisible(JComponent.java:2644)
+	at javax.swing.JTabbedPane.fireStateChanged(JTabbedPane.java:394)
+	at javax.swing.JTabbedPane$ModelListener.stateChanged(JTabbedPane.java:270)
+	at javax.swing.DefaultSingleSelectionModel.fireStateChanged(DefaultSingleSelectionModel.java:132)
+	at javax.swing.DefaultSingleSelectionModel.setSelectedIndex(DefaultSingleSelectionModel.java:67)
+	at javax.swing.JTabbedPane.setSelectedIndexImpl(JTabbedPane.java:616)
+	at javax.swing.JTabbedPane.setSelectedIndex(JTabbedPane.java:591)
+	at com.mathworks.widgets.desk.DTTabbedPane.setSelectedIndex(DTTabbedPane.java:415)
+	at com.mathworks.widgets.desk.DTTabbedPane.toFront(DTTabbedPane.java:362)
+	at com.mathworks.widgets.desk.DTTabbedPane.itemStateChanged(DTTabbedPane.java:590)
+	at java.awt.AWTEventMulticaster.itemStateChanged(AWTEventMulticaster.java:454)
+	at com.mathworks.widgets.desk.DTInternalFrame.setSelected(DTInternalFrame.java:364)
+	at com.mathworks.widgets.desk.DTGroup.itemStateChanged(DTGroup.java:1596)
+	at java.awt.AWTEventMulticaster.itemStateChanged(AWTEventMulticaster.java:453)
+	at com.mathworks.widgets.desk.DTDocumentContainer.setSelected(DTDocumentContainer.java:1097)
+	at com.mathworks.widgets.desk.DTDocumentContainer.setSelected(DTDocumentContainer.java:1037)
+	at com.mathworks.widgets.desk.DTDocumentContainer.propertyChange(DTDocumentContainer.java:1819)
+	at com.mathworks.widgets.desk.DTOccupant.forwardPropertyChange(DTOccupant.java:1197)
+	at com.mathworks.widgets.desk.DTClient.itemStateChanged(DTClient.java:1641)
+	at com.mathworks.widgets.desk.DTInternalFrame.setSelected(DTInternalFrame.java:364)
+	at com.mathworks.widgets.desk.DTClient.setSelected(DTClient.java:488)
+	at com.mathworks.widgets.desk.DTOccupant.setSelected(DTOccupant.java:822)
+	at com.mathworks.widgets.desk.DTOccupant.setSelected(DTOccupant.java:810)
+	at com.mathworks.widgets.desk.Desktop.setClientSelected(Desktop.java:1413)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.mathworks.widgets.desk.Desktop$DeferredFacadeProxy.invoke(Desktop.java:8564)
+	at com.sun.proxy.$Proxy6.setClientSelected(Unknown Source)
+	at com.mathworks.widgets.desk.Desktop.setClientSelected(Desktop.java:1377)
+	at com.mathworks.mde.liveeditor.LiveEditorApplication.doOpenLiveEditor(LiveEditorApplication.java:222)
+	at com.mathworks.mde.liveeditor.LiveEditorApplication.access$100(LiveEditorApplication.java:67)
+	at com.mathworks.mde.liveeditor.LiveEditorApplication$2.run(LiveEditorApplication.java:203)
+	at com.mathworks.jmi.AWTUtilities$Invoker$5$1.run(AWTUtilities.java:591)
+	at com.mathworks.mvm.context.ThreadContext$1.call(ThreadContext.java:76)
+	at com.mathworks.mvm.context.ThreadContext.callWithContext(ThreadContext.java:105)
+	at com.mathworks.mvm.context.ThreadContext.runWithContext(ThreadContext.java:73)
+	at com.mathworks.mvm.context.MvmContext.runWithContext(MvmContext.java:107)
+	at com.mathworks.jmi.AWTUtilities$Invoker$5.runWithOutput(AWTUtilities.java:588)
+	at com.mathworks.jmi.AWTUtilities$Invoker$2.watchedRun(AWTUtilities.java:475)
+	at com.mathworks.jmi.AWTUtilities$WatchedRunnable.run(AWTUtilities.java:436)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+exem1_diff_finies

@@ -1,0 +1,89 @@
+Algorithme de Gauss-Newton
+Vraie Jacobienne =0
+Methode diff finies = avants
+ndigits :  8 
+------------------------------------------------------------------
+         k     ||f'(beta)||   f(beta)      ||delta||    exitflag 
+------------------------------------------------------------------
+{Unable to perform assignment because the size of the left side is 1-by-1 and the
+size of the right side is 2-by-1.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('diff_finies_avant', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m', 30)" style="font-weight:bold">diff_finies_avant</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m',30,0)">line 30</a>)
+        Jac(k,j)=(fun(x+h*v)-fun(x))/h;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('exem1_diff_finies', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/exem1_diff_finies.m', 92)" style="font-weight:bold">exem1_diff_finies</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/exem1_diff_finies.m',92,0)">line 92</a>)
+	    Jres = diff_finies_avant(@res1,beta0, ndigits);
+} 
+diff_finies_avant
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('diff_finies_avant', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m', 21)" style="font-weight:bold">diff_finies_avant</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m',21,0)">line 21</a>)
+w=max(eps,10^(-option));
+} 
+exem1_diff_finies
+Algorithme de Gauss-Newton
+Vraie Jacobienne =0
+Methode diff finies = avants
+ndigits :  8 
+------------------------------------------------------------------
+         k     ||f'(beta)||   f(beta)      ||delta||    exitflag 
+------------------------------------------------------------------
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mtimes')" style="font-weight:bold"> * </a>
+Incorrect dimensions for matrix multiplication. Check that the number of columns
+in the first matrix matches the number of rows in the second matrix. To operate on
+each element of the matrix individually, use TIMES (.*) for elementwise
+multiplication.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('diff_finies_avant', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m', 28)" style="font-weight:bold">diff_finies_avant</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m',28,0)">line 28</a>)
+        h=sqrt(w)*max(abs(x),1)*sgn(x);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('exem1_diff_finies', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/exem1_diff_finies.m', 92)" style="font-weight:bold">exem1_diff_finies</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/exem1_diff_finies.m',92,0)">line 92</a>)
+	    Jres = diff_finies_avant(@res1,beta0, ndigits);
+
+<a href="matlab:helpview('matlab','error_innerdim')" style="font-weight:bold">Related documentation</a>
+} 
+diff_finies_avant
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('diff_finies_avant', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m', 21)" style="font-weight:bold">diff_finies_avant</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m',21,0)">line 21</a>)
+w=max(eps,10^(-option));
+} 
+exem1_diff_finies
+Algorithme de Gauss-Newton
+Vraie Jacobienne =0
+Methode diff finies = avants
+ndigits :  8 
+------------------------------------------------------------------
+         k     ||f'(beta)||   f(beta)      ||delta||    exitflag 
+------------------------------------------------------------------
+{Unable to perform assignment because the size of the left side is 1-by-1 and the
+size of the right side is 2-by-1.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('diff_finies_avant', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m', 30)" style="font-weight:bold">diff_finies_avant</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m',30,0)">line 30</a>)
+        Jac(k,j)=(fun(x+h*v)-fun(x))/h;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('exem1_diff_finies', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/exem1_diff_finies.m', 92)" style="font-weight:bold">exem1_diff_finies</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/exem1_diff_finies.m',92,0)">line 92</a>)
+	    Jres = diff_finies_avant(@res1,beta0, ndigits);
+} 
+eps
+
+ans =
+
+   2.2204e-16
+
+C14_diff_finies
+Algorithme de Gauss-Newton
+Vraie Jacobienne =0
+Methode diff finies = avants
+ndigits :  8 
+------------------------------------------------------------------
+         k     ||f'(beta)||   f(beta)      ||delta||    exitflag 
+------------------------------------------------------------------
+{Unable to perform assignment because the size of the left side is 1-by-1 and the size of the right side is 2-by-1.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('diff_finies_avant', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m', 30)" style="font-weight:bold">diff_finies_avant</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/diff_finies_avant.m',30,0)">line 30</a>)
+        Jac(k,j)=(fun(x+h*v)-fun(x))/h;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('exem1_diff_finies', '/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/exem1_diff_finies.m', 92)" style="font-weight:bold">exem1_diff_finies</a> (<a href="matlab: opentoline('/Users/sakunwithanage/Desktop/TP_opti/TP3-diff-finies/exem1_diff_finies.m',92,0)">line 92</a>)
+	    Jres = diff_finies_avant(@res1,beta0, ndigits);
+} 
