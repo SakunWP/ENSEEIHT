@@ -1,0 +1,25 @@
+2024-12-20 10:43:00,769 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@145f66e3: startup date [Fri Dec 20 10:43:00 CET 2024]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2024-12-20 10:43:01,238 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/Users/sakunwithanage/Desktop/2A/ENSEEIHT/S7/intergiciel/jms-subject/activemq_path/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2024-12-20 10:43:01,453 | INFO  | PListStore:[/Users/sakunwithanage/Desktop/2A/ENSEEIHT/S7/intergiciel/jms-subject/activemq_path/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2024-12-20 10:43:01,578 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:MacBook-Air-de-Sakun.local-64691-1734687781459-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2024-12-20 10:43:01,588 | INFO  | Listening for connections at: tcp://MacBook-Air-de-Sakun.local:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2024-12-20 10:43:01,589 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2024-12-20 10:43:01,591 | INFO  | Listening for connections at: amqp://MacBook-Air-de-Sakun.local:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2024-12-20 10:43:01,592 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2024-12-20 10:43:01,594 | INFO  | Listening for connections at: stomp://MacBook-Air-de-Sakun.local:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2024-12-20 10:43:01,595 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2024-12-20 10:43:01,597 | INFO  | Listening for connections at: mqtt://MacBook-Air-de-Sakun.local:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2024-12-20 10:43:01,597 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2024-12-20 10:43:01,667 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@65327f5{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2024-12-20 10:43:01,691 | INFO  | Listening for connections at ws://MacBook-Air-de-Sakun.local:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2024-12-20 10:43:01,692 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2024-12-20 10:43:01,692 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:MacBook-Air-de-Sakun.local-64691-1734687781459-0:1) started | org.apache.activemq.broker.BrokerService | main
+2024-12-20 10:43:01,693 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2024-12-20 10:43:01,695 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: /Users/sakunwithanage/Desktop/2A/ENSEEIHT/S7/intergiciel/jms-subject/activemq_path/data/kahadb only has 44643 mb of usable space. - resetting to maximum available disk space: 44643 mb | org.apache.activemq.broker.BrokerService | main
+2024-12-20 10:43:01,695 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: /Users/sakunwithanage/Desktop/2A/ENSEEIHT/S7/intergiciel/jms-subject/activemq_path/data only has 44643 mb of usable space. - resetting to maximum available disk space: 44643 mb | org.apache.activemq.broker.BrokerService | main
+2024-12-20 10:43:01,922 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2024-12-20 10:43:01,980 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2024-12-20 10:43:01,980 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2024-12-20 10:43:02,005 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2024-12-20 10:43:02,115 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2024-12-20 10:43:02,139 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
