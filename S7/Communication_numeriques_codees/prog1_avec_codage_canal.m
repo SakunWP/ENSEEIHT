@@ -82,7 +82,7 @@ for i=1:length(EbN0)
     demodulation_soft_i=imag(demodulation);
 
     demodulation_soft=zeros(1,2*length(demodulation));
-
+    % 
     demodulation_soft(1:2:end)=demodulation_soft_r;
     demodulation_soft(2:2:end)=demodulation_soft_i;
     
@@ -92,12 +92,15 @@ for i=1:length(EbN0)
 
     tbdepth = 25;
     %decodedData = vitdec(reshape(demodulation_soft, 1, size(demodulation, 1)*size(demodulation,2)),trellis,tbdepth,'trunc','unquant');
-    decodedData = vitdec(demodulation_soft, trellis, tbdepth, 'trunc', 'unquant');
+    %decodedData = vitdec(demodulation_soft, trellis, tbdepth, 'trunc', 'unquant');
+    decodedData = vitdec(real(demodulation), trellis, tbdepth, 'trunc', 'unquant');
+
 
 
 
     % Calcul des erreurs soft
-    erreurs = bits(1:end-retard/Ns) ~= decodedData; % Comparaison bit à bit
+    %erreurs = bits(1:end-retard/Ns) ~= decodedData; % Comparaison bit à bit
+    erreurs = bits(1:length(decodedData)) ~= decodedData;
     TEB = sum(erreurs) / length(decodedData);
     TEB_liste_soft(i)=TEB;
 

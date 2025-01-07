@@ -82,9 +82,9 @@ for i=1:length(EbN0)
     demodulation_soft_i=imag(demodulation);
 
     demodulation_soft=zeros(1,2*length(demodulation));
-
-    demodulation_soft(1:2:end)=demodulation_soft_r;
-    demodulation_soft(2:2:end)=demodulation_soft_i;
+    % 
+    % demodulation_soft(1:2:end)=demodulation_soft_r;
+    % demodulation_soft(2:2:end)=demodulation_soft_i;
     
     % Décodage QPSK soft
     detecte = pskdemod(demodulation_soft, 4, OutputType='bit');
