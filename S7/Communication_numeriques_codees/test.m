@@ -71,7 +71,7 @@
 %     TEB1(k) = mean(S ~= code_soft);
 %     TEB2(k) = mean(S ~= code_hard);
 % end
-% 
+
 % figure
 % %TEB simulé avec soft décodage
 % semilogy(EbN0dB,TEB1)
