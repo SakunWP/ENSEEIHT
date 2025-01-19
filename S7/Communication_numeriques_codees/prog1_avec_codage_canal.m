@@ -1,4 +1,4 @@
-%% Paramètres généraux
+ %% Paramètres généraux
 clear all
 close all
 % Paramètres du filtre de mise en forme

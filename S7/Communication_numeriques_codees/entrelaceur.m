@@ -24,6 +24,7 @@ for i = 1:length(EbN0_db)
  octets_rs = bitsToOctets(bits_rs);
  laceur = convdeintrlv(octets_rs,12,17);
  bits_rs= octetsToBits(laceur);
+ bits_rs = transpose(bits_rs);
  
  % Codage convolutif
  donnees_codees = convenc(bits_rs', trellis);
