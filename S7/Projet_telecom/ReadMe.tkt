@@ -1,0 +1,4 @@
+Il y a un fichier matlab pour chaque niveau d'avancement.
+Le fichier toute_les_courbes.m permet de lancer toutes les courbes jusqu'au code de REED SALOMON
+Le fichier prog1_sans_codage.m correspond à l'implémentation sans codage
+Le fichier prog1_avec_codage.m correpond à l'implémentation avec le code convolutif

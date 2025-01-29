@@ -1,0 +1,11 @@
+%Paramètres généraux
+Rs = 1000; % à changer
+%Débit binaire
+Rb = 2*Rs;
+
+% Génération de bits 
+bits = randi(2, 1, N) - 1;
+
+% Mapping QPSK
+bits1 = bit2int(bits', 2);
+symboles = pskmod(bits1,4);
