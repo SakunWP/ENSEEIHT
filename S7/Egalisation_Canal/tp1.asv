@@ -32,12 +32,12 @@ for ii = 1:length(Es_N0_dB)
    s = 1/sqrt(2)*((1-2*bits(1,:))+1j*(1-2*bits(2,:))); % QPSK modulation following the BPSK rule for each quadatrure component: {0 -> +1; 1 -> -1} 
    sigs2=var(s);
 
-   % nexttile
-   % [dsp,f] = pwelch(s,[],[],[],'twosided');
-   % plot(f,10*log(dsp))
-   % title('dsp emission')
-   % xlabel('fréquence')
-   % ylabel('dsp')
+   nexttile
+   [dsp,f] = pwelch(s,[],[],[],'twosided');
+   plot(f,10*log(dsp))
+   title('dsp emission')
+   xlabel('fréquence')
+   ylabel('dsp')
    
    % Channel convolution: equivalent symbol based representation
    z = conv(hc,s);
@@ -48,7 +48,7 @@ for ii = 1:length(Es_N0_dB)
     n = sqrt(sig2b/2)*randn(1,N+Lc-1)+1j*sqrt(sig2b/2)*randn(1,N+Lc-1); % white gaussian noise, QPSK case
    
    % Adding Noise
-   y = z ; % additive white gaussian noise
+   y = z + n; % additive white gaussian noise
 
    %% zero forcing equalization
    % We now study ZF equalization
@@ -104,7 +104,7 @@ for ii = 1:length(Es_N0_dB)
     nexttile
     [dsp_r,f] = pwelch(y,[],[],[],'twosided');
     plot(f,10*log(dsp_r))
-    title('dsp reception')
+    title('dsp_reception')
     xlabel('fréquence')
     ylabel('dsp')
     
