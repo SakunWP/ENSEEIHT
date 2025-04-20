@@ -48,7 +48,7 @@ for ii = 1:length(Es_N0_dB)
     n = sqrt(sig2b/2)*randn(1,N+Lc-1)+1j*sqrt(sig2b/2)*randn(1,N+Lc-1); % white gaussian noise, QPSK case
    
    % Adding Noise
-   y = z ; % additive white gaussian noise
+   y = z +n; % additive white gaussian noise
 
    %% zero forcing equalization
    % We now study ZF equalization
@@ -79,6 +79,7 @@ for ii = 1:length(Es_N0_dB)
     [r, p, k]=residuez(1, hc);
     [w_zfinf]=ComputeRI( Nzf, r, p, k );
     s_zf=conv(w_zfinf,y);
+    
 
 
     %MMSE
@@ -109,7 +110,7 @@ for ii = 1:length(Es_N0_dB)
     ylabel('dsp')
     
     
-    %% FIR
+    %% FIR zf
     Nw=10;
     d = 5;
     H = toeplitz([hc(1) zeros(1,Nw-1)]',[hc, zeros(1,Nw-1)]);
@@ -135,31 +136,30 @@ for ii = 1:length(Es_N0_dB)
     nErr_Hatinfdirectimp(1,ii) = size(find([bits(:)- bHat(:)]),1);
     nErr_Hat(1,ii) = size(find([bits(:)- bHat(:)]),1);
 
-    %% FIR
-    Nw=10;
-    d = 5;
-    H = toeplitz([hc(1) zeros(1,Nw-1)]',[hc, zeros(1,Nw-1)]);
-    Ry = (conj(H)*H.');
-    p = zeros(Nw+Lc-1,1);
 
-    P= (H.'*inv((Ry))*conj(H));
-    [alpha,dopt]=max(diag(abs(P)));
-    p(d+1)=1;
-    p(dopt)=1;
-    Gamma = conj(H)*p;
-    w_zf_fir = (inv(Ry)*Gamma).';
+    %% RIFMMSE
 
-    sig_e_opt = sigs2 -conj(w_zf_fir)*Gamma;
-    bias = 1-sig_e_opt/sigs2;
-    shat = conv(w_zf_fir,y);
-    shat = shat(dopt:end);
+    % deltac= zeros(1,2*Lc-1) ;
+    % deltac(Lc) = 1 ;
+    % [r,p,k]=residuez(fliplr(conj(hc)),(conv(hc,fliplr(conj(hc)))+(sig2b/sigs2)*deltac));
+    % w_mmserif= w_RIP ;
+    % s_mmserif=conv(w_mmserif,y);
+    % bhat_mmserif = zeros(2,length(bits));
+    % bhat_mmserif(1,:)= real(s_mmserif(1:end-(Nw+1))) < 0;
+    % bhat_mmserif(2,:)= imag(s_mmserif(1:end-(Nw+1))) < 0;
+    % nErr_mmserif(1,ii) = size(find([bits(:)- bhat_mmserif(:)]),1);
 
-    bHat = zeros(2,length(bits));
-    bHat(1,:)=real(shat(1:N))<0;
-    bHat(2,:)=imag(shat(1:N))<0;
 
-    nErr_Hat1infdirectimp(1,ii) = size(find([bits(:)- bHat(:)]),1);
-    nErr_Hat1(1,ii) = size(find([bits(:)- bHat(:)]),1);
+    %% ML
+
+    % s_ml = mlseeq(y,hc,const,tblen, 'rst' ,nsamp,[] ,[])' ;
+    % bhat_ml = zeros(2,N/2);
+    % bhat_ml(1,:)= -real(s_ml(1:N/2)) < 0;
+    % bhat_ml(2,:)= -imag(s_ml(1:N/2)) < 0;
+    % bhat_ml_vec = cat(1,bhat_ml(1,:),bhat_ml(2,:));
+    % nErr_mlinf(1,ii) = size(find([bits(:)- bhat_ml_vec(:)]),1);
+
+    
 
 end
 simBer_zfinfdirectimp = nErr_zfinfdirectimp/N/log2(M); % simulated ber
@@ -171,8 +171,10 @@ simBer_mmseinf = nErr_mmse/N/log2(M); % simulated ber
 simBer_Hatinfdirectimp = nErr_Hatinfdirectimp/N/log2(M); % simulated ber
 simBer_Hatinf = nErr_Hat/N/log2(M); % simulated ber
 
-simBer_Hat1infdirectimp = nErr_Hat1infdirectimp/N/log2(M); % simulated ber
-simBer_Hat1inf = nErr_Hat1/N/log2(M); % simulated ber
+% simBer_Hat1infdirectimp = nErr_Hat1infdirectimp/N/log2(M); % simulated ber
+% simBer_Hat1inf = nErr_Hat1/N/log2(M); % simulated ber
+
+%simBer_mmserif = nErr_mmserif/N/log2(M); % simulated ber
 
 
 % plot
@@ -184,13 +186,14 @@ hold on
 % hold on
 semilogy(Es_N0_dB,simBer_mmseinfdirectimp(1,:),'p-','Linewidth',2);
 hold on
+% semilogy(Es_N0_dB,simBer_mlinf,'p-','Linewidth',2);
+% hold on
 semilogy(Es_N0_dB,simBer_Hatinfdirectimp(1,:),'p-','Linewidth',2);
-hold on
-semilogy(Es_N0_dB,simBer_Hat1infdirectimp(1,:),'p-','Linewidth',2);
-% semilogy(Es_N0_dB,simBer_mmseinf(1,:),'gr-','Linewidth',2);
+%semilogy(Es_N0_dB,simBer_mmserif(1,:),'gr-','Linewidth',2);
 axis([0 50 10^-6 0.5])
 grid on
-legend('sim-zf-inf/direct','sim-mmse-inf/direct');
+legend('sim-zf','sim-mmse', 'sim-zf_fir', 'sim-mmse_fir');
+%legend('sim-zf','sim-mmse', 'sim-zf_fir');
 xlabel('E_s/N_0, dB');
 ylabel('Bit Error Rate');
 title('Bit error probability curve for QPSK in ISI with ZF equalizers')
