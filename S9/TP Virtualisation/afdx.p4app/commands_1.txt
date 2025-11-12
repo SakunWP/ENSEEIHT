@@ -1,0 +1,5 @@
+table_set_default afdx_table  _drop
+table_add afdx_table 1 => 2
+table_add afdx_table 2 => 3
+table_add afdx_table 3 => 1
+table_add afdx_table 4 => 3
